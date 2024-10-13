@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "17696528-a9ca-4048-84a8-659e83b8f885",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "36760995-17696528-a9ca-4048-84a8-659e83b8f885"
+	},
+	"item": [
+		{
+			"name": "Show All Users",
+			"id": "2217342c-c0be-4180-a80b-69973fb2e831",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI4NzUyODUzLCJleHAiOjE3MzEzNDQ4NTMsIm5iZiI6MTcyODc1Mjg1MywianRpIjoiSnZ0SVQ4MGZ0UFF6YlpMYyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6IjAifQ.zmauIy6s2uqSYaJhk88Cn9_AxCwdDHOU34-ffvFa2ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail User",
+			"id": "26b16f38-66db-49b5-ba7a-71abb5e2e823",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI4NzUyODUzLCJleHAiOjE3MzEzNDQ4NTMsIm5iZiI6MTcyODc1Mjg1MywianRpIjoiSnZ0SVQ4MGZ0UFF6YlpMYyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6IjAifQ.zmauIy6s2uqSYaJhk88Cn9_AxCwdDHOU34-ffvFa2ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Create",
+			"id": "40642cad-0a97-4201-b32c-f8f35f9cf893",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI4NzUyODUzLCJleHAiOjE3MzEzNDQ4NTMsIm5iZiI6MTcyODc1Mjg1MywianRpIjoiSnZ0SVQ4MGZ0UFF6YlpMYyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6IjAifQ.zmauIy6s2uqSYaJhk88Cn9_AxCwdDHOU34-ffvFa2ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "User 2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user2@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "09111111111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Yangon",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "postman-cloud:///1ef6a2f5-fc1a-4c70-9d73-6d393b0e6e2f"
+						},
+						{
+							"key": "gender",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"id": "5eccaad6-04d8-403e-8326-b7f71f989dda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI4NzUyODUzLCJleHAiOjE3MzEzNDQ4NTMsIm5iZiI6MTcyODc1Mjg1MywianRpIjoiSnZ0SVQ4MGZ0UFF6YlpMYyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6IjAifQ.zmauIy6s2uqSYaJhk88Cn9_AxCwdDHOU34-ffvFa2ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"User 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/8/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"8",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"id": "722060b7-236b-40a0-95e3-e2b132b6d1b3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI4NzUyODUzLCJleHAiOjE3MzEzNDQ4NTMsIm5iZiI6MTcyODc1Mjg1MywianRpIjoiSnZ0SVQ4MGZ0UFF6YlpMYyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6IjAifQ.zmauIy6s2uqSYaJhk88Cn9_AxCwdDHOU34-ffvFa2ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/2/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"2",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
