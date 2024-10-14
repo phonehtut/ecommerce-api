@@ -14,7 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         try {
-            $products = Product::paginate(10);
+            $products = Product::with('categories')->paginate(10);
 
             if ($products->isEmpty()) {
                 return response()->json([
@@ -62,6 +62,8 @@ class ProductController extends Controller
                     'image' => $imagePath,
                     'price' => $request->price,
                 ]);
+
+                $product->categories()->attach($request->categories);
             } catch (\Throwable $th) {
                 return response()->json([
                     'error' => "Could not create product!",
@@ -153,7 +155,7 @@ class ProductController extends Controller
                     // Store image on local folder
                     $imagePath = null;
                     if ($request->hasFile('image')) {
-                        
+
                         // Delete the old image from storage if it exists
                         if ($product->image) {
                             Storage::disk('public')->delete($product->image);
@@ -169,6 +171,8 @@ class ProductController extends Controller
                         'image' => $imagePath ?? $product->image,
                         'price' => $request->price ?? $product->price
                     ]);
+
+                    $product->categories()->attach($request->categories);
 
                     // Update Product About
                     $product->about->update([
